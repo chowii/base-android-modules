@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "io.github.sabbib.chowdhury.base.android.library"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -18,7 +18,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":base-network"))
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
     implementation("com.google.android.material:material:1.6.1")
